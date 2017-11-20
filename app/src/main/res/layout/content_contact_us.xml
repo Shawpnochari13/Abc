@@ -7,7 +7,7 @@
     android:padding="10dp"
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.techjany.abcbuilders.ContactUS"
+    tools:context="com.techjany.abcbuilders.SQlite.ContactUS"
     tools:showIn="@layout/activity_contact_us">
 
 
@@ -21,53 +21,85 @@
         android:text="Contact US" />
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/editText_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:inputType="textPersonName"
-        android:hint="Enter Your Name" />
+        android:hint="Name" />
 
     <EditText
-        android:id="@+id/editText14"
+        android:id="@+id/editText_surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:hint="Enter Your Name Email"
+        android:layout_marginTop="5dp"
+        android:hint="Sur Name"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText15"
+        android:id="@+id/editText_Marks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:hint="Enter Phone Number"
+        android:layout_marginTop="5dp"
+        android:hint="Marks"
         android:inputType="phone" />
 
     <EditText
-        android:id="@+id/editText16"
+        android:id="@+id/editText_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:hint="Properties Interested In"
+        android:layout_marginTop="5dp"
+        android:hint="Id"
         android:inputType="textMultiLine" />
+
+    <Button
+    android:background="#000000"
+    android:textColor="#FFFFFF"
+    android:id="@+id/button_viewAll"
+    android:textColorHint="#FFFFFF"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:text="View" />
 
     <Button
         android:background="#000000"
         android:textColor="#FFFFFF"
-        android:id="@+id/button7"
+        android:id="@+id/button_add"
         android:textColorHint="#FFFFFF"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Submit Info" />
+        android:text="Add" />
+
+    <Button
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:id="@+id/button_update"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Update" />
+    <Button
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:id="@+id/button_delete"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Delete" />
 </LinearLayout>
