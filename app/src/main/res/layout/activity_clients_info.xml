@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#37474F"
-    tools:context="com.techjany.abcbuilders.SQlite.ContactUS">
+    tools:context="com.techjany.abc.SQlite.ClientsInfo">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -29,6 +29,6 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <include layout="@layout/content_contact_us" />
+    <include layout="@layout/content_clients_info" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -4,16 +4,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/viewgallery"
-            android:title="View Gallery" />
+            android:title="Gallery" />
         <item
             android:id="@+id/ourlocations"
-            android:title="Our Locations" />
+            android:title="Locations" />
         <item
             android:id="@+id/testimonials"
-            android:title="Testimonials" />
+            android:title="Retrofit" />
         <item
             android:id="@+id/contactus"
-            android:title="Contact Us" />
+            android:title="SQLite" />
     </group>
 
     <item android:title="Communicate">

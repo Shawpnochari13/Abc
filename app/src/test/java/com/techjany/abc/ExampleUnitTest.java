@@ -1,4 +1,4 @@
-package com.techjany.abcbuilders;
+package com.techjany.abc;
 
 import org.junit.Test;
 

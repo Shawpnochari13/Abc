@@ -1,5 +1,6 @@
-package com.techjany.abcbuilders.SQlite;
+package com.techjany.abc.SQlite;
 
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,17 +8,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.techjany.abcbuilders.R;
+import com.techjany.abc.R;
 
-public class ContactUS extends AppCompatActivity {
+public class ClientsInfo extends AppCompatActivity {
 
     DatabaseHelper myDb;
-    EditText editName,editSurname,editMarks ,editTextId;
+    EditText editName,editEmail,editNumber ,editTextId;
     Button btnAddData;
     Button btnviewAll;
     Button btnDelete;
@@ -26,15 +28,15 @@ public class ContactUS extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.activity_clients_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         myDb = new DatabaseHelper(this);
 
 
         editName = (EditText)findViewById(R.id.editText_name);
-        editSurname = (EditText)findViewById(R.id.editText_surname);
-        editMarks = (EditText)findViewById(R.id.editText_Marks);
+        editEmail = (EditText)findViewById(R.id.editText_email);
+        editNumber = (EditText)findViewById(R.id.editText_number);
         editTextId = (EditText)findViewById(R.id.editText_id);
         btnAddData = (Button)findViewById(R.id.button_add);
         btnviewAll = (Button)findViewById(R.id.button_viewAll);
@@ -62,9 +64,9 @@ public class ContactUS extends AppCompatActivity {
                     public void onClick(View v) {
                         Integer deletedRows = myDb.deleteData(editTextId.getText().toString());
                         if(deletedRows > 0)
-                            Toast.makeText(ContactUS.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data Deleted",Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(ContactUS.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data not Deleted",Toast.LENGTH_LONG).show();
                     }
                 }
         );
@@ -76,11 +78,11 @@ public class ContactUS extends AppCompatActivity {
                     public void onClick(View v) {
                         boolean isUpdate = myDb.updateData(editTextId.getText().toString(),
                                 editName.getText().toString(),
-                                editSurname.getText().toString(),editMarks.getText().toString());
+                                editEmail.getText().toString(),editNumber.getText().toString());
                         if(isUpdate == true)
-                            Toast.makeText(ContactUS.this,"Data Update",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data Update",Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(ContactUS.this,"Data not Updated",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data not Updated",Toast.LENGTH_LONG).show();
                     }
                 }
         );
@@ -91,12 +93,12 @@ public class ContactUS extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         boolean isInserted = myDb.insertData(editName.getText().toString(),
-                                editSurname.getText().toString(),
-                                editMarks.getText().toString() );
+                                editEmail.getText().toString(),
+                                editNumber.getText().toString() );
                         if(isInserted == true)
-                            Toast.makeText(ContactUS.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data Inserted",Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(ContactUS.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+                            Toast.makeText(ClientsInfo.this,"Data not Inserted",Toast.LENGTH_LONG).show();
                     }
                 }
         );
@@ -118,22 +120,28 @@ public class ContactUS extends AppCompatActivity {
                         while (res.moveToNext()) {
                             buffer.append("Id :"+ res.getString(0)+"\n");
                             buffer.append("Name :"+ res.getString(1)+"\n");
-                            buffer.append("Surname :"+ res.getString(2)+"\n");
-                            buffer.append("Marks :"+ res.getString(3)+"\n\n");
+                            buffer.append("Email :"+ res.getString(2)+"\n");
+                            buffer.append("Ph. No. :"+ res.getString(3)+"\n\n");
                         }
 
                         // Show all data
-                        showMessage("Data",buffer.toString());
+                        showMessage("Clients Data",buffer.toString());
                     }
                 }
         );
     }
 
-    public void showMessage(String title,String Message){
+    public void showMessage(String title,String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
         builder.setTitle(title);
-        builder.setMessage(Message);
+        builder.setPositiveButton(Html.fromHtml("<font color='#FF7F27'>Close</font>"), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int arg1) {
+
+            }
+        });
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.clients);
+        builder.setMessage(message);
         builder.show();
     }
 

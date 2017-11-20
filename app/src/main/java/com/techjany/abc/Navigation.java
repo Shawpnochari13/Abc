@@ -1,4 +1,4 @@
-package com.techjany.abcbuilders;
+package com.techjany.abc;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.techjany.abcbuilders.Retrofit.activity.Testimonials;
-import com.techjany.abcbuilders.SQlite.ContactUS;
+import com.techjany.abc.Retrofit.activity.RetrofitPractice;
+import com.techjany.abc.SQlite.ClientsInfo;
 
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -102,10 +102,10 @@ public class Navigation extends AppCompatActivity
             Intent intent = new Intent(this,Locations.class);
             startActivity(intent);
         } else if (id == R.id.testimonials) {
-            Intent intent = new Intent(this,Testimonials.class);
+            Intent intent = new Intent(this,RetrofitPractice.class);
             startActivity(intent);
         } else if (id == R.id.contactus) {
-            Intent intent = new Intent(this,ContactUS.class);
+            Intent intent = new Intent(this,ClientsInfo.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
 
@@ -135,12 +135,12 @@ public class Navigation extends AppCompatActivity
                 break;
 
             case R.id.btnTestimonials:
-                Intent intent3 = new Intent(this,Testimonials.class);
+                Intent intent3 = new Intent(this,RetrofitPractice.class);
                 startActivity(intent3);
                 break;
 
             case R.id.btnContact:
-                Intent intent4 = new Intent(this,ContactUS.class);
+                Intent intent4 = new Intent(this,ClientsInfo.class);
                 startActivity(intent4);
                 break;
 

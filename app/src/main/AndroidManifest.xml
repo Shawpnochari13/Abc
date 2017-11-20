@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.techjany.abcbuilders">
+    package="com.techjany.abc">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -18,19 +18,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Navigation"
+            android:name="com.techjany.abc.Navigation"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Gallery"
+            android:name="com.techjany.abc.Gallery"
             android:label="@string/title_activity_gallery"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Retrofit.activity.Testimonials"
-            android:label="@string/title_activity_testimonials"
+            android:name="com.techjany.abc.Retrofit.activity.RetrofitPractice"
+            android:label="@string/title_activity_retrofit_practice"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SQlite.ContactUS"
+            android:name="com.techjany.abc.SQlite.ClientsInfo"
             android:label="@string/title_activity_contact_us"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -39,9 +39,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Locations"
+            android:name="com.techjany.abc.Locations"
             android:label="@string/title_activity_locations" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.techjany.abc.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

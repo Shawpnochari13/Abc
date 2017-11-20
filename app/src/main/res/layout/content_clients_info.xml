@@ -7,8 +7,8 @@
     android:padding="10dp"
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.techjany.abcbuilders.SQlite.ContactUS"
-    tools:showIn="@layout/activity_contact_us">
+    tools:context="com.techjany.abc.SQlite.ClientsInfo"
+    tools:showIn="@layout/activity_clients_info">
 
 
     <TextView
@@ -18,7 +18,7 @@
         android:textColor="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact US" />
+        android:text="Add Clients Info" />
 
     <EditText
         android:id="@+id/editText_name"
@@ -31,23 +31,23 @@
         android:hint="Name" />
 
     <EditText
-        android:id="@+id/editText_surname"
+        android:id="@+id/editText_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
         android:layout_marginTop="5dp"
-        android:hint="Sur Name"
+        android:hint="Email"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText_Marks"
+        android:id="@+id/editText_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textColorHint="#FFFFFF"
         android:layout_marginTop="5dp"
-        android:hint="Marks"
+        android:hint="Phone Number"
         android:inputType="phone" />
 
     <EditText
@@ -57,8 +57,8 @@
         android:ems="10"
         android:textColorHint="#FFFFFF"
         android:layout_marginTop="5dp"
-        android:hint="Id"
-        android:inputType="textMultiLine" />
+        android:hint="Client ID"
+        android:inputType="textImeMultiLine" />
 
     <Button
     android:background="#000000"
