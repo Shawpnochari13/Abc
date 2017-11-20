@@ -28,6 +28,7 @@
                android:layout_height="match_parent">
 
                <ImageView
+                   android:id="@+id/bedRoom"
                    android:scaleType="centerCrop"
                    android:layout_weight="1"
                    android:layout_width="match_parent"
@@ -60,13 +61,13 @@
                android:layout_height="match_parent">
 
                <ImageView
+                   android:id="@+id/kitchen"
                    android:scaleType="centerCrop"
                    android:layout_weight="1"
                    android:layout_width="match_parent"
-                   android:background="@drawable/kitchen"
                    android:layout_height="0dp" />
                <TextView
-                   android:text="Bed Room"
+                   android:text="Kitchen"
                    android:textColor="#000000"
                    android:textSize="20sp"
                    android:textStyle="bold"
@@ -92,10 +93,10 @@
                android:layout_height="match_parent">
 
                <ImageView
+                   android:id="@+id/livingRoom"
                    android:scaleType="centerCrop"
                    android:layout_weight="1"
                    android:layout_width="match_parent"
-                   android:background="@drawable/living"
                    android:layout_height="0dp" />
                <TextView
                    android:text="Living Room"
@@ -124,10 +125,10 @@
                android:layout_height="match_parent">
 
                <ImageView
+                   android:id="@+id/studyRoom"
                    android:scaleType="centerCrop"
                    android:layout_weight="1"
                    android:layout_width="match_parent"
-                   android:background="@drawable/study"
                    android:layout_height="0dp" />
                <TextView
                    android:text="Study Room"
